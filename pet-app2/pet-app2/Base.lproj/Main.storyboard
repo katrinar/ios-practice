@@ -52,10 +52,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="Cab-jN-aYt">
             <objects>
-                <viewController id="3FV-lh-9zG" sceneMemberID="viewController">
+                <viewController id="3FV-lh-9zG" customClass="SecondViewController" customModule="pet_app2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TPU-90-L61"/>
                         <viewControllerLayoutGuide type="bottom" id="peL-Ef-Dfg"/>
@@ -63,8 +63,27 @@
                     <view key="view" contentMode="scaleToFill" id="49f-iS-5Sz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="bJS-YB-jZJ">
+                                <rect key="frame" x="281" y="543" width="39" height="37"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eER-pR-uwv">
+                                <rect key="frame" x="279" y="78" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bJS-YB-jZJ" firstAttribute="centerX" secondItem="49f-iS-5Sz" secondAttribute="centerX" id="AJd-YO-INr"/>
+                            <constraint firstItem="peL-Ef-Dfg" firstAttribute="top" secondItem="bJS-YB-jZJ" secondAttribute="bottom" constant="20" id="EVT-5J-9ki"/>
+                            <constraint firstItem="eER-pR-uwv" firstAttribute="centerX" secondItem="49f-iS-5Sz" secondAttribute="centerX" id="gxG-ZQ-Nlv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="eER-pR-uwv" id="xFq-F3-xKD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y9X-UY-Xi3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
