@@ -44,6 +44,7 @@ class SlideViewController: UIViewController {
         btn.setTitle("Tap me", forState: .Normal)
         btn.frame = CGRect(x: x, y: y, width: self.view.frame.size.width-2*x, height: 44)
         btn.backgroundColor = UIColor.blackColor()
+        btn.addTarget(self, action: #selector(SlideViewController.btnTapped(_:)), forControlEvents: .TouchUpInside)
         self.view.addSubview(btn)
         
         
@@ -63,6 +64,10 @@ class SlideViewController: UIViewController {
 //        thirdSlide.backgroundColor = UIColor.greenColor()
 //        self.slideView.addSubview(thirdSlide)
         
+    }
+    
+    func btnTapped(btn: UIButton) {
+        print("btn tapped: ")
     }
 
     override func didReceiveMemoryWarning() {
