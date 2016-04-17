@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AAE699D10DA11B7D35774FE7065929AFAAAAF8DA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AAE699D10DA11B7D35774FE7065929AFAAAAF8DA" : 0,
+    "809B27CCD103079F7E28838EB5070AD4713FBB26" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A269367C-B6C4-49FA-A1AB-11C8E73FE88E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AAE699D10DA11B7D35774FE7065929AFAAAAF8DA" : "iOS-practice\/",
+    "809B27CCD103079F7E28838EB5070AD4713FBB26" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "adopt-pet-app",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "adopt-pet-app\/adopt-pet-app.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/katrinar\/codecademy-labs_final-projects.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "809B27CCD103079F7E28838EB5070AD4713FBB26"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/katrinar\/ios-practice.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AAE699D10DA11B7D35774FE7065929AFAAAAF8DA"
+    }
+  ]
+}
