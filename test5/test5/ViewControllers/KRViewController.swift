@@ -22,7 +22,7 @@ class KRViewController: testViewController, UITableViewDelegate, UITableViewData
         edgesForExtendedLayout = .None
         let frame = UIScreen.mainScreen().bounds
         let view = UIView(frame: frame)
-        view.backgroundColor = UIColor.lightGrayColor()
+        view.backgroundColor = UIColor.whiteColor()
         
         self.petTable = UITableView(frame: frame, style: .Plain)
         self.petTable.delegate = self

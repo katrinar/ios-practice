@@ -35,7 +35,8 @@ class testHomeViewController: testViewController {
         homeBtn.layer.borderWidth = 1
         homeBtn.layer.borderColor = UIColor.darkGrayColor().CGColor
         homeBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        homeBtn.setTitle("Rescue a pet!", forState: .Normal)
+        homeBtn.setTitle("click me", forState: .Normal)
+        homeBtn.showsTouchWhenHighlighted = true
         
         view.addSubview(homeBtn)
         
@@ -56,12 +57,10 @@ class testHomeViewController: testViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 
 }
