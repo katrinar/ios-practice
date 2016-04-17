@@ -74,6 +74,10 @@ class ViewController: UIViewController {
         
         self.numTapped = 0
         
+        homeLabel.textAlignment = .Center
+        homeLabel.text = "Dogs near you"
+
+        
     }
 
     override func didReceiveMemoryWarning() {

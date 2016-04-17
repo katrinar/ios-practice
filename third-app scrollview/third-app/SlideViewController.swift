@@ -13,6 +13,7 @@ import UIKit
 class SlideViewController: UIViewController {
 
     @IBOutlet var slideView: UIScrollView!
+    var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,15 +38,22 @@ class SlideViewController: UIViewController {
         thirdImg.image = UIImage(named: "mk.png")
         self.slideView.addSubview(thirdImg)
         
-        let y = self.slideView.frame.origin.y+self.slideView.frame.size.height+30
+        var y = self.slideView.frame.origin.y+self.slideView.frame.size.height+30
         let x = CGFloat(20)
         
         let btn = UIButton(type: .Custom)
-        btn.setTitle("Tap me", forState: .Normal)
+        btn.setTitle("name?", forState: .Normal)
         btn.frame = CGRect(x: x, y: y, width: self.view.frame.size.width-2*x, height: 44)
         btn.backgroundColor = UIColor.blackColor()
         btn.addTarget(self, action: #selector(SlideViewController.btnTapped(_:)), forControlEvents: .TouchUpInside)
         self.view.addSubview(btn)
+        y += btn.frame.size.height+30
+        
+        self.label = UILabel(frame: CGRect(x: x, y: y, width: self.view.frame.size.width-2*x, height: 22))
+        self.label.textColor = UIColor.darkGrayColor()
+        self.label.text = "woof"
+        self.label.textAlignment = .Center
+        self.view.addSubview(label)
         
         
         //simple scrollview with background colors
@@ -67,7 +75,19 @@ class SlideViewController: UIViewController {
     }
     
     func btnTapped(btn: UIButton) {
-        print("btn tapped: ")
+        let offset = self.slideView.contentOffset.x
+        print("btn tapped: \(offset)")
+        self.label.text = "take me home?"
+        
+        if (offset == 0){
+            self.label.text = "Frankie"
+        }
+        if (offset == 200){
+            self.label.text = "Frenchie"
+        }
+        if (offset == 400){
+            self.label.text = "Milkshake"
+        }
     }
 
     override func didReceiveMemoryWarning() {
