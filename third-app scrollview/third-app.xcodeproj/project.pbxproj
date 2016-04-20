@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5403FF971CC44BFA00183B36 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403FF961CC44BFA00183B36 /* SlideViewController.swift */; };
 		549F0BC11CC3DF1D00220FAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549F0BC01CC3DF1D00220FAE /* AppDelegate.swift */; };
 		549F0BC31CC3DF1D00220FAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549F0BC21CC3DF1D00220FAE /* ViewController.swift */; };
 		549F0BC61CC3DF1D00220FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 549F0BC41CC3DF1D00220FAE /* Main.storyboard */; };
@@ -16,10 +17,10 @@
 		549F0BD61CC3EAFB00220FAE /* frenchie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 549F0BD41CC3EAFB00220FAE /* frenchie@2x.png */; };
 		549F0BD81CC3EC9400220FAE /* mk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 549F0BD71CC3EC9400220FAE /* mk@2x.png */; };
 		549F0BDA1CC3ECC100220FAE /* dog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 549F0BD91CC3ECC100220FAE /* dog@2x.png */; };
-		549F0BDC1CC3EF3900220FAE /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549F0BDB1CC3EF3900220FAE /* SlideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5403FF961CC44BFA00183B36 /* SlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideViewController.swift; path = "../../../../../Katrina/Documents/iOS-practice/third-app scrollview/third-app/SlideViewController.swift"; sourceTree = "<group>"; };
 		549F0BBD1CC3DF1D00220FAE /* third-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "third-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		549F0BC01CC3DF1D00220FAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		549F0BC21CC3DF1D00220FAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +32,6 @@
 		549F0BD41CC3EAFB00220FAE /* frenchie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frenchie@2x.png"; sourceTree = "<group>"; };
 		549F0BD71CC3EC9400220FAE /* mk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mk@2x.png"; sourceTree = "<group>"; };
 		549F0BD91CC3ECC100220FAE /* dog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog@2x.png"; sourceTree = "<group>"; };
-		549F0BDB1CC3EF3900220FAE /* SlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideViewController.swift; path = "../../../../../Katrina/Documents/iOS-practice/third-app/third-app/SlideViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 				549F0BD21CC3EAFB00220FAE /* Images */,
 				549F0BC01CC3DF1D00220FAE /* AppDelegate.swift */,
 				549F0BC21CC3DF1D00220FAE /* ViewController.swift */,
-				549F0BDB1CC3EF3900220FAE /* SlideViewController.swift */,
+				5403FF961CC44BFA00183B36 /* SlideViewController.swift */,
 				549F0BC41CC3DF1D00220FAE /* Main.storyboard */,
 				549F0BC71CC3DF1D00220FAE /* Assets.xcassets */,
 				549F0BC91CC3DF1D00220FAE /* LaunchScreen.storyboard */,
@@ -163,9 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5403FF971CC44BFA00183B36 /* SlideViewController.swift in Sources */,
 				549F0BC31CC3DF1D00220FAE /* ViewController.swift in Sources */,
 				549F0BC11CC3DF1D00220FAE /* AppDelegate.swift in Sources */,
-				549F0BDC1CC3EF3900220FAE /* SlideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,19 +44,28 @@ class ViewController: UIViewController {
         
         if (self.numTapped % 2 == 0) {
             isEven = true
-            self.homeImg.image = UIImage(named: "dog.png")
-            textColor = UIColor.yellowColor()
-
         }
         
         else if (self.numTapped % 5 == 0){
             numFive = true
-            self.homeImg.image = UIImage(named: "mk.png")
-            textColor = UIColor.greenColor()
-
         }
+       
+        
+        
+        if (isEven == true){
+            self.homeImg.image = UIImage(named: "dog.png")
+            textColor = UIColor.lightGrayColor()
+        }
+        
+        else if (numFive == true){
+            self.homeImg.image = UIImage(named: "mk.png")
+            textColor = UIColor.darkGrayColor()
+            
+        }
+        
         else {
             self.homeImg.image = UIImage(named: "frenchie.png")
+
         }
         
     

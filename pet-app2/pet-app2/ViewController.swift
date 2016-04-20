@@ -13,12 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet var slideView: UIScrollView!
     @IBOutlet var nextBtn: UIButton!
     var header: UILabel!
-    var subHeader: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        //ScrollView
+        edgesForExtendedLayout = .None
         self.slideView.contentSize = CGSize(width: 600, height: 200)
         
         
@@ -37,21 +38,22 @@ class ViewController: UIViewController {
         thirdImg.image = UIImage(named: "3.png")
         self.slideView.addSubview(thirdImg)
         
-        self.nextBtn.setTitle("Find shelters near you", forState: .Normal)
+        //Buttons
+        
+        self.nextBtn.setTitle("Shelters near you", forState: .Normal)
         self.nextBtn.backgroundColor = UIColor.lightGrayColor()
         self.nextBtn.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
         
-        self.header = UILabel(frame: CGRect(x: 20, y: 50, width: 200, height: 44))
-        self.header.text = "Looking to adopt?"
+        
+        //Text
+        
+         self.header = UILabel(frame: CGRect(x: 20, y: 20, width: 200, height: 44))
+        self.header.text = "Adopt a furry friend"
         self.header.textColor = UIColor.lightGrayColor()
         self.header.textAlignment = .Center
         self.view.addSubview(header)
         
-        self.subHeader = UILabel(frame: CGRect(x: 20, y: 95, width: 300, height: 44))
-        self.subHeader.text = "These guys are looking for homes!"
-        self.subHeader.textColor = UIColor.lightGrayColor()
-        self.subHeader.textAlignment = .Center
-        self.view.addSubview(subHeader)
+       
     
     }
 

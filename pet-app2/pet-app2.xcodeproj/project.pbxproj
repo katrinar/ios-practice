@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5403FFC21CC70A9D00183B36 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403FFC11CC70A9D00183B36 /* SecondViewController.swift */; };
 		549F0C2F1CC42A0400220FAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549F0C2E1CC42A0400220FAE /* AppDelegate.swift */; };
 		549F0C311CC42A0400220FAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549F0C301CC42A0400220FAE /* ViewController.swift */; };
 		549F0C341CC42A0400220FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 549F0C321CC42A0400220FAE /* Main.storyboard */; };
 		549F0C361CC42A0400220FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 549F0C351CC42A0400220FAE /* Assets.xcassets */; };
 		549F0C391CC42A0400220FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 549F0C371CC42A0400220FAE /* LaunchScreen.storyboard */; };
-		549F0C411CC42A6C00220FAE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549F0C401CC42A6C00220FAE /* SecondViewController.swift */; };
 		549F0C461CC42B3800220FAE /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 549F0C431CC42B3800220FAE /* 1@2x.png */; };
 		549F0C471CC42B3800220FAE /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 549F0C441CC42B3800220FAE /* 2@2x.png */; };
 		549F0C481CC42B3800220FAE /* 3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 549F0C451CC42B3800220FAE /* 3@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5403FFC11CC70A9D00183B36 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = "../../../../../Katrina/Documents/iOS-practice/pet-app2/pet-app2/SecondViewController.swift"; sourceTree = "<group>"; };
 		549F0C2B1CC42A0400220FAE /* pet-app2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pet-app2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		549F0C2E1CC42A0400220FAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		549F0C301CC42A0400220FAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +27,6 @@
 		549F0C351CC42A0400220FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		549F0C381CC42A0400220FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		549F0C3A1CC42A0400220FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		549F0C401CC42A6C00220FAE /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		549F0C431CC42B3800220FAE /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
 		549F0C441CC42B3800220FAE /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x.png"; sourceTree = "<group>"; };
 		549F0C451CC42B3800220FAE /* 3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3@2x.png"; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 				549F0C421CC42B3800220FAE /* images-dogs */,
 				549F0C2E1CC42A0400220FAE /* AppDelegate.swift */,
 				549F0C301CC42A0400220FAE /* ViewController.swift */,
-				549F0C401CC42A6C00220FAE /* SecondViewController.swift */,
+				5403FFC11CC70A9D00183B36 /* SecondViewController.swift */,
 				549F0C321CC42A0400220FAE /* Main.storyboard */,
 				549F0C351CC42A0400220FAE /* Assets.xcassets */,
 				549F0C371CC42A0400220FAE /* LaunchScreen.storyboard */,
@@ -116,6 +116,7 @@
 				TargetAttributes = {
 					549F0C2A1CC42A0400220FAE = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = QDUUW7F987;
 					};
 				};
 			};
@@ -158,7 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				549F0C411CC42A6C00220FAE /* SecondViewController.swift in Sources */,
+				5403FFC21CC70A9D00183B36 /* SecondViewController.swift in Sources */,
 				549F0C311CC42A0400220FAE /* ViewController.swift in Sources */,
 				549F0C2F1CC42A0400220FAE /* AppDelegate.swift in Sources */,
 			);
@@ -273,10 +274,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "pet-app2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kat.pet-app2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -284,10 +288,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "pet-app2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kat.pet-app2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -310,6 +317,7 @@
 				549F0C3F1CC42A0400220FAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
