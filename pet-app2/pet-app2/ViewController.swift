@@ -25,17 +25,17 @@ class ViewController: UIViewController {
         
         let firstImg = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         self.slideView.pagingEnabled = true
-        firstImg.image = UIImage(named: "1.png")
+        firstImg.image = UIImage(named: "first.png")
         self.slideView.addSubview(firstImg)
         
         let secondImg = UIImageView(frame: CGRect(x: 200, y: 0, width: 200, height: 200))
         self.slideView.pagingEnabled = true
-        secondImg.image = UIImage(named: "2.png")
+        secondImg.image = UIImage(named: "second.png")
         self.slideView.addSubview(secondImg)
         
         let thirdImg = UIImageView(frame: CGRect(x: 400, y: 0, width: 200, height: 200))
         self.slideView.pagingEnabled = true
-        thirdImg.image = UIImage(named: "3.png")
+        thirdImg.image = UIImage(named: "third.png")
         self.slideView.addSubview(thirdImg)
         
         //Buttons
@@ -43,17 +43,17 @@ class ViewController: UIViewController {
         self.nextBtn.setTitle("Shelters near you", forState: .Normal)
         self.nextBtn.backgroundColor = UIColor.lightGrayColor()
         self.nextBtn.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
+        self.nextBtn.layer.cornerRadius = 5
         
         
         //Text
         
-         self.header = UILabel(frame: CGRect(x: 20, y: 20, width: 200, height: 44))
+        
+        self.header = UILabel(frame: CGRect(x: 60, y: 20, width: 200, height: 44))
         self.header.text = "Adopt a furry friend"
         self.header.textColor = UIColor.lightGrayColor()
         self.header.textAlignment = .Center
         self.view.addSubview(header)
-        
-       
     
     }
 

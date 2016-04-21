@@ -11,6 +11,7 @@
 		5403FFAC1CC462DD00183B36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5403FFAB1CC462DD00183B36 /* Assets.xcassets */; };
 		5403FFB91CC4639600183B36 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403FFB81CC4639600183B36 /* HomeViewController.swift */; };
 		5403FFBC1CC463CB00183B36 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403FFBB1CC463CB00183B36 /* BaseViewController.swift */; };
+		547532C01CC92A9000AF9684 /* btnImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 547532BF1CC92A9000AF9684 /* btnImage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		5403FFB01CC462DD00183B36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5403FFB81CC4639600183B36 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5403FFBB1CC463CB00183B36 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		547532BF1CC92A9000AF9684 /* btnImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnImage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		5403FFA31CC462DD00183B36 /* trash-talk */ = {
 			isa = PBXGroup;
 			children = (
+				547532BE1CC92A9000AF9684 /* icons */,
 				5403FFBA1CC463BC00183B36 /* BaseClasses */,
 				5403FFB61CC4632400183B36 /* ViewControllers */,
 				5403FFA41CC462DD00183B36 /* AppDelegate.swift */,
@@ -77,6 +80,14 @@
 			);
 			name = BaseClasses;
 			path = ../BaseClasses;
+			sourceTree = "<group>";
+		};
+		547532BE1CC92A9000AF9684 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				547532BF1CC92A9000AF9684 /* btnImage.png */,
+			);
+			path = icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547532C01CC92A9000AF9684 /* btnImage.png in Resources */,
 				5403FFAC1CC462DD00183B36 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +293,7 @@
 				5403FFB51CC462DD00183B36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

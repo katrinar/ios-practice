@@ -85,7 +85,7 @@
                                     <constraint firstAttribute="height" constant="44" id="nq0-Es-HES"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrK-a4-tEf">
@@ -99,10 +99,19 @@
                                     <action selector="buttonTapped" destination="vqD-23-zrV" eventType="touchUpInside" id="T77-aY-6w4"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xEM-CL-6GF">
+                                <rect key="frame" x="180" y="382" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="QpJ-Q1-pUq"/>
+                                    <constraint firstAttribute="width" constant="200" id="ugv-7U-LhS"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xEM-CL-6GF" firstAttribute="top" secondItem="YrK-a4-tEf" secondAttribute="bottom" constant="40" id="068-hZ-P4R"/>
                             <constraint firstItem="jmI-3d-uSf" firstAttribute="top" secondItem="FCJ-4s-sI9" secondAttribute="bottom" constant="35" id="J43-bJ-8DS"/>
+                            <constraint firstItem="xEM-CL-6GF" firstAttribute="centerX" secondItem="71e-Kg-8SS" secondAttribute="centerX" id="So6-V1-4aj"/>
                             <constraint firstItem="2wd-mG-Oe7" firstAttribute="centerX" secondItem="71e-Kg-8SS" secondAttribute="centerX" id="WdD-gf-ieE"/>
                             <constraint firstItem="YrK-a4-tEf" firstAttribute="top" secondItem="2wd-mG-Oe7" secondAttribute="bottom" constant="32" id="s70-HE-1He"/>
                             <constraint firstItem="2wd-mG-Oe7" firstAttribute="top" secondItem="jmI-3d-uSf" secondAttribute="bottom" constant="60" id="tAj-5n-4bg"/>
@@ -111,6 +120,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cityImg" destination="xEM-CL-6GF" id="tbE-7a-mZo"/>
                         <outlet property="cityLabel" destination="jmI-3d-uSf" id="T9p-d3-nwD"/>
                         <outlet property="textOutputBtn" destination="YrK-a4-tEf" id="9Ls-Lm-GE9"/>
                         <outlet property="txtInput" destination="2wd-mG-Oe7" id="dpI-CF-XVH"/>

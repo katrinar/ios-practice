@@ -19,32 +19,37 @@ class HomeViewController: BaseViewController {
         self.view = view
         
         //header
+        
+        let originX = frame.size.width * 0.5
     
-        let header = UILabel(frame: CGRect(x: 20, y: 20, width: 200, height: 44))
+        let header = UILabel(frame: CGRect(x: originX-100, y: 20, width: 200, height: 44))
         header.text = "Trash Talk Generator"
+        header.font = UIFont(name: "Impact", size: 16)
         header.textColor = UIColor.blackColor()
         header.textAlignment = .Center
         view.addSubview(header)
         
-        //textfield<#T##Int#>
-        let txtfield = UITextField(frame: CGRect(x: 80, y: 200, width: 160, height: 44))
-        txtfield.backgroundColor = UIColor.lightGrayColor()
+        //textfield
+        let txtfield = UITextField(frame: CGRect(x: originX-80, y: 200, width: 160, height: 44))
+        txtfield.layer.borderColor = UIColor.lightGrayColor().CGColor
+        txtfield.layer.borderWidth = 2
+        view.addSubview(txtfield)
+
         
         //submit btn
         let submit = UIButton(type: .Custom)
-        submit.frame = CGRect(x: 120, y: 300, width: 80, height: 44)
+        submit.frame = CGRect(x: originX-40, y: 300, width: 80, height: 44)
         submit.layer.borderWidth = 1
         submit.layer.borderColor = UIColor.lightGrayColor().CGColor
+        submit.layer.cornerRadius = 5
+        submit.setImage(UIImage(named:"btnImage.png"), forState: .Normal)
         view.addSubview(submit)
         
-        
-        view.addSubview(txtfield)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
