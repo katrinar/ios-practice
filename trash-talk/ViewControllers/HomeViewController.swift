@@ -11,6 +11,8 @@ import UIKit
 class HomeViewController: BaseViewController {
     
     var numTapped: Int!
+    var scoreLabel: UILabel!
+    var trashTalk: UILabel!
     
     override func loadView() {
         edgesForExtendedLayout = .None
@@ -43,19 +45,16 @@ class HomeViewController: BaseViewController {
         submit.addTarget(self, action: #selector(HomeViewController.submitBtn(_:)), forControlEvents: .TouchUpInside)
         
         //trash talk score
-        let scoreLabel: UILabel!
         scoreLabel = UILabel(frame: CGRect(x: originX-100, y: 400, width: 200, height: 44))
         scoreLabel.textColor = UIColor.darkGrayColor()
         scoreLabel.font = UIFont(name: "HiraginoSans-W3", size: 16)
-        scoreLabel.text = "Trash talk score: \(self.numTapped)"
         view.addSubview(scoreLabel)
         
         //trash talk phrases
-        let trashTalk: UILabel!
         trashTalk = UILabel(frame: CGRect(x: originX-100, y: 100, width: 200, height: 44))
         trashTalk.textColor = UIColor.darkGrayColor()
-        trashTalk.text = "suck it"
         view.addSubview(trashTalk)
+
         
         
     }
@@ -64,6 +63,7 @@ class HomeViewController: BaseViewController {
     func submitBtn(btn: UIButton){
         self.numTapped = self.numTapped+1
         print("submitted score count: \(self.numTapped)")
+        self.scoreLabel.text = "Trash Talk Score: \(self.numTapped)"
     }
     
     
@@ -72,8 +72,6 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         
         self.numTapped = 0
-        
-    
 
     }
 
