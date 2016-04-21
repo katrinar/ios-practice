@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     
+    var numTapped: Int!
+    
     override func loadView() {
         edgesForExtendedLayout = .None
         let frame = UIScreen.mainScreen().bounds
@@ -18,23 +20,17 @@ class HomeViewController: BaseViewController {
         
         self.view = view
         
-        //header
+        //margins
         
         let originX = frame.size.width * 0.5
-    
+        
+        //header
         let header = UILabel(frame: CGRect(x: originX-100, y: 20, width: 200, height: 44))
         header.text = "Trash Talk Generator"
-        header.font = UIFont(name: "Impact", size: 16)
-        header.textColor = UIColor.blackColor()
+        header.font = UIFont(name: "HiraginoSans-W3", size: 18)
+        header.textColor = UIColor.darkGrayColor()
         header.textAlignment = .Center
         view.addSubview(header)
-        
-        //textfield
-        let txtfield = UITextField(frame: CGRect(x: originX-80, y: 200, width: 160, height: 44))
-        txtfield.layer.borderColor = UIColor.lightGrayColor().CGColor
-        txtfield.layer.borderWidth = 2
-        view.addSubview(txtfield)
-
         
         //submit btn
         let submit = UIButton(type: .Custom)
@@ -44,11 +40,40 @@ class HomeViewController: BaseViewController {
         submit.layer.cornerRadius = 5
         submit.setImage(UIImage(named:"btnImage.png"), forState: .Normal)
         view.addSubview(submit)
+        submit.addTarget(self, action: #selector(HomeViewController.submitBtn(_:)), forControlEvents: .TouchUpInside)
+        
+        //trash talk score
+        let scoreLabel: UILabel!
+        scoreLabel = UILabel(frame: CGRect(x: originX-100, y: 400, width: 200, height: 44))
+        scoreLabel.textColor = UIColor.darkGrayColor()
+        scoreLabel.font = UIFont(name: "HiraginoSans-W3", size: 16)
+        scoreLabel.text = "Trash talk score: \(self.numTapped)"
+        view.addSubview(scoreLabel)
+        
+        //trash talk phrases
+        let trashTalk: UILabel!
+        trashTalk = UILabel(frame: CGRect(x: originX-100, y: 100, width: 200, height: 44))
+        trashTalk.textColor = UIColor.darkGrayColor()
+        trashTalk.text = "suck it"
+        view.addSubview(trashTalk)
+        
         
     }
+    
+    //submit btn action
+    func submitBtn(btn: UIButton){
+        self.numTapped = self.numTapped+1
+        print("submitted score count: \(self.numTapped)")
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.numTapped = 0
+        
+    
 
     }
 

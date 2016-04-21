@@ -47,6 +47,7 @@ class SlideViewController: UIViewController {
         btn.backgroundColor = UIColor.blackColor()
         btn.addTarget(self, action: #selector(SlideViewController.btnTapped(_:)), forControlEvents: .TouchUpInside)
         self.view.addSubview(btn)
+        
         y += btn.frame.size.height+30
         
         self.label = UILabel(frame: CGRect(x: x, y: y, width: self.view.frame.size.width-2*x, height: 22))

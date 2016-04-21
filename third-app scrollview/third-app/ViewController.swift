@@ -29,7 +29,6 @@ class ViewController: UIViewController {
         if (textFieldValue?.characters.count > 0) {
             self.homeLabel.text = textFieldValue
             return
-
         }
 
 //        //fizbuzz example
