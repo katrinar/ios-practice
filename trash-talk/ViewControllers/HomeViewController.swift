@@ -58,10 +58,6 @@ class HomeViewController: BaseViewController {
         trashTalk.textColor = UIColor.darkGrayColor()
         view.addSubview(trashTalk)
         
-        
-        
-
-
     }
     
     //submit btn action
@@ -72,28 +68,25 @@ class HomeViewController: BaseViewController {
         
         if (self.numTapped % 2 == 0) {
             self.isEven = true
+            self.trashTalk.text = "you're a bernie mob tard"
             }
         else if (self.numTapped % 5 == 0) {
             self.numFive = true
-            }
-        
-        
-        if (self.isEven == true) {
-            self.trashTalk.text = "suck it"
-            }
-        
-        else if (self.numFive == true) {
-            self.trashTalk.text = "you're a bernie mob tard"
+            self.trashTalk.text = "boom"
             }
         else {
-            self.trashTalk.text = "boom"
-                    }
+            self.trashTalk.text = "That's a clown question, bro"
+        }
+        
+        
         }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.numTapped = 0
+        
+        self.trashTalk.font = UIFont(name: "HiraginoSans-W3", size: 12)
     }
     
     override func didReceiveMemoryWarning() {
