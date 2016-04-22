@@ -11,6 +11,8 @@
 		5403FFAC1CC462DD00183B36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5403FFAB1CC462DD00183B36 /* Assets.xcassets */; };
 		5403FFB91CC4639600183B36 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403FFB81CC4639600183B36 /* HomeViewController.swift */; };
 		5403FFBC1CC463CB00183B36 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403FFBB1CC463CB00183B36 /* BaseViewController.swift */; };
+		54358D961CC9B5150087DAB8 /* btnExit.png in Resources */ = {isa = PBXBuildFile; fileRef = 54358D951CC9B5150087DAB8 /* btnExit.png */; };
+		54358D981CC9B8080087DAB8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54358D971CC9B8080087DAB8 /* MainViewController.swift */; };
 		547532C01CC92A9000AF9684 /* btnImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 547532BF1CC92A9000AF9684 /* btnImage.png */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +23,8 @@
 		5403FFB01CC462DD00183B36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5403FFB81CC4639600183B36 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5403FFBB1CC463CB00183B36 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		54358D951CC9B5150087DAB8 /* btnExit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnExit.png; sourceTree = "<group>"; };
+		54358D971CC9B8080087DAB8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "../../../../../Katrina/Documents/iOS-practice/trash-talk/ViewControllers/MainViewController.swift"; sourceTree = "<group>"; };
 		547532BF1CC92A9000AF9684 /* btnImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnImage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				5403FFB81CC4639600183B36 /* HomeViewController.swift */,
+				54358D971CC9B8080087DAB8 /* MainViewController.swift */,
 			);
 			name = ViewControllers;
 			path = ../ViewControllers;
@@ -86,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				547532BF1CC92A9000AF9684 /* btnImage.png */,
+				54358D951CC9B5150087DAB8 /* btnExit.png */,
 			);
 			path = icons;
 			sourceTree = "<group>";
@@ -122,6 +128,7 @@
 				TargetAttributes = {
 					5403FFA01CC462DD00183B36 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = QDUUW7F987;
 					};
 				};
 			};
@@ -148,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54358D961CC9B5150087DAB8 /* btnExit.png in Resources */,
 				547532C01CC92A9000AF9684 /* btnImage.png in Resources */,
 				5403FFAC1CC462DD00183B36 /* Assets.xcassets in Resources */,
 			);
@@ -163,6 +171,7 @@
 				5403FFA51CC462DD00183B36 /* AppDelegate.swift in Sources */,
 				5403FFB91CC4639600183B36 /* HomeViewController.swift in Sources */,
 				5403FFBC1CC463CB00183B36 /* BaseViewController.swift in Sources */,
+				54358D981CC9B8080087DAB8 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,10 +265,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "trash-talk/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kat.trash-talk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -267,10 +279,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "trash-talk/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kat.trash-talk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
