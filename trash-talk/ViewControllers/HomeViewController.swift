@@ -10,9 +10,12 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     
+    //variables
     var numTapped: Int!
     var scoreLabel: UILabel!
     var trashTalk: UILabel!
+    var isEven = false
+    var numFive = false
     
     override func loadView() {
         edgesForExtendedLayout = .None
@@ -54,9 +57,11 @@ class HomeViewController: BaseViewController {
         trashTalk = UILabel(frame: CGRect(x: originX-100, y: 100, width: 200, height: 44))
         trashTalk.textColor = UIColor.darkGrayColor()
         view.addSubview(trashTalk)
+        
+        
+        
 
-        
-        
+
     }
     
     //submit btn action
@@ -64,17 +69,33 @@ class HomeViewController: BaseViewController {
         self.numTapped = self.numTapped+1
         print("submitted score count: \(self.numTapped)")
         self.scoreLabel.text = "Trash Talk Score: \(self.numTapped)"
-    }
+        
+        if (self.numTapped % 2 == 0) {
+            self.isEven = true
+            }
+        else if (self.numTapped % 5 == 0) {
+            self.numFive = true
+            }
+        
+        
+        if (self.isEven == true) {
+            self.trashTalk.text = "suck it"
+            }
+        
+        else if (self.numFive == true) {
+            self.trashTalk.text = "you're a bernie mob tard"
+            }
+        else {
+            self.trashTalk.text = "boom"
+                    }
+        }
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.numTapped = 0
-
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
