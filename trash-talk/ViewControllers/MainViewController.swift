@@ -10,6 +10,8 @@ import UIKit
 
 class MainViewController: BaseViewController {
     
+    var infoHeader: UILabel!
+    
     override func loadView() {
         
         edgesForExtendedLayout = .None
@@ -18,6 +20,19 @@ class MainViewController: BaseViewController {
         view.backgroundColor = UIColor.whiteColor()
         
         self.view = view
+        
+        //margins
+        
+        let originX = frame.size.width * 0.5
+        let originY = frame.size.height * 0.5
+        
+        //infoLabel
+        let infoHeader = UILabel(frame: CGRect(x: originX-100, y: 20, width: 200, height: 44))
+        infoHeader.text = "powered by fizzbuzz"
+        infoHeader.font = UIFont(name: "HiraginoSans-W3", size: 12)
+        infoHeader.textColor = UIColor.darkGrayColor()
+        infoHeader.textAlignment = .Center
+        view.addSubview(infoHeader)
     }
 
     override func viewDidLoad() {

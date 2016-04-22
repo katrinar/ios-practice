@@ -84,7 +84,9 @@ class HomeViewController: BaseViewController {
         
         if (self.numTapped % 2 == 0) {
             self.isEven = true
-            self.trashTalk.text = "you're a bernie mob tard"
+            self.trashTalk.text = "Get your popcorn ready, because I'm gonna put on a show"
+            self.trashTalk.numberOfLines = 0
+            self.trashTalk.lineBreakMode = .ByWordWrapping
             }
         else if (self.numTapped % 5 == 0) {
             self.numFive = true
