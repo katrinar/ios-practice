@@ -16,7 +16,22 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mFK-Ad-69R">
+                                <rect key="frame" x="252" y="190" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="VRx-gq-XWW"/>
+                                    <constraint firstAttribute="width" constant="160" id="cE6-19-Ovz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mFK-Ad-69R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ARp-RZ-0Hc"/>
+                            <constraint firstItem="mFK-Ad-69R" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="XF8-3D-nql"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vX3-cy-ScJ"/>
                 </viewController>
