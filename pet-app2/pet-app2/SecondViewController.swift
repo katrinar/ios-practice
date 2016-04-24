@@ -21,33 +21,16 @@ class SecondViewController: UIViewController {
         if (textFieldValue?.characters.count > 0 ) {
             self.cityLabel.text = textFieldValue?.capitalizedString
             self.cityLabel.textColor = UIColor.lightGrayColor()
+            
+            if (textFieldValue?.lowercaseString == "new york") {
+                self.cityImg.image = UIImage(named: "fourth.png")
+            }
+            else {
+                self.cityImg.image = UIImage(named: "second.png")
+            }
+
+            
             return
-        }
-        
-     
-//function option 1
-//        var ny = false
-        
-//    
-//        if (cityValue == "New York"){
-//            ny = true
-//        }
-//        
-//        if (ny == true){
-//            self.cityImg.image = UIImage(named: "fourth.png")
-//        }
-//        else {
-//            self.cityImg.image = UIImage(named: "third.png")
-//        }
-//
-        
-//function option 2
-        let cityValue = self.cityLabel.text
-        if (cityValue == "New York") {
-            self.cityImg.image = UIImage(named: "fourth.png")
-        }
-        else {
-            self.cityImg.image = UIImage(named: "second.png")
         }
         
     }
