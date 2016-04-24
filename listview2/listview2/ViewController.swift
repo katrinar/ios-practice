@@ -16,12 +16,20 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
     @IBOutlet var nameField: UITextField!
     @IBOutlet var imagesScroll: UIScrollView!
     @IBOutlet var pageControl: UIPageControl!
-     var namesArray = Array<String>()
+    var namesArray = Array<String>()
+    let listCtr = ListViewController()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let action = #selector(ViewController.showListView(_:))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next",
+                                                                 style: .Plain,
+                                                                 target: self,
+                                                                 action: action)
+        
+        
         let firstSlide = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         firstSlide.backgroundColor = UIColor.redColor()
         self.imagesScroll.addSubview(firstSlide)
@@ -38,8 +46,13 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
         self.imagesScroll.delegate = self
         
         self.nameField.delegate = self
-        
     
+    }
+    
+    func showListView(btn: UIBarButtonItem){
+        print("showListView: ")
+        listCtr.namesArray = self.namesArray
+        self.navigationController?.pushViewController(listCtr, animated: true)
     }
     
     //delegate callback method
