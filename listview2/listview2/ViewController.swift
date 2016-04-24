@@ -9,7 +9,7 @@
 import UIKit
 //conforming to the delegate protocol = add UIScrollViewDelegate to ViewController
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {
     
     //properties
     
@@ -23,7 +23,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
 
         let firstSlide = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        firstSlide.backgroundColor = UIColor.lightGrayColor()
+        firstSlide.backgroundColor = UIColor.redColor()
         self.imagesScroll.addSubview(firstSlide)
         
         let secondSlide = UIView(frame: CGRect(x: 200, y: 0, width: 200, height: 200))
@@ -36,6 +36,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         self.imagesScroll.contentSize = CGSize(width: 600, height: 0)
         self.imagesScroll.delegate = self
+        
+        self.nameField.delegate = self
         
     
     }
@@ -59,6 +61,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
         
         else {
+            self.view.backgroundColor = UIColor.cyanColor()
             self.pageControl.currentPage = 2
         }
     }
@@ -80,6 +83,49 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             
         }
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        print("textFieldShouldReturn: ")
+        textField.resignFirstResponder()
+        return true
+        
+        
+    }
+    
+    //fires when user is in textfield
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        print ("textFieldShouldBegininEditing: ")
+        return true
+    }
+    
+    //fires when user types in a string
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        print("shouldChangeCharactersinRange: \(string)")
+        
+        if (string == "a"){
+            self.view.backgroundColor = UIColor.whiteColor()
+        }
+        else if (string == "e"){
+            self.view.backgroundColor = UIColor.whiteColor()
+        }
+        else if (string == "i"){
+            self.view.backgroundColor = UIColor.whiteColor()
+        }
+        else if (string == "o"){
+            self.view.backgroundColor = UIColor.whiteColor()
+        }
+        else if (string == "u"){
+            self.view.backgroundColor = UIColor.whiteColor()
+        }
+        else {
+            self.view.backgroundColor = UIColor.yellowColor()
+        }
+        
+        return true
+
+    }
+    
     
     //button action
     @IBAction func addName() {
