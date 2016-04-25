@@ -28,22 +28,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let originY = frame.size.height * 0.5
         
         //text field
-        let textField = UITextField(frame: CGRect(x: originX, y: 50, width: 160, height: 44))
-        textField.backgroundColor = UIColor.yellowColor()
+        let textField = UITextField(frame: CGRect(x: 10, y: 40, width: originX, height: 44))
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.darkGrayColor().CGColor
         self.view.addSubview(textField)
         
         //add button
-        let addBtn = UIButton(type: .Custom)
-        addBtn.frame = CGRect(x: originX, y: originY, width: 40, height: 44)
-        addBtn.addTarget(self,
-                              action: #selector(ViewController.addToList(_:)),
-                              forControlEvents: .TouchUpInside)
-        self.view.addSubview(addBtn)
+//        let addBtn = UIButton(type: .Custom)
+////        self.addBtn.frame = CGRect(x: originX + 80, y: 20, width: 60, height: 44)
+//        self.addBtn.backgroundColor = UIColor.darkGrayColor()
+//        self.addBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
+//        self.addBtn.layer.cornerRadius = 5
+//        self.addBtn.setTitle("Add", forState: .Normal)
+//        self.view.addSubview(addBtn)
+        
+//        self.addBtn.addTarget(self,
+//                              action: #selector(ViewController.addToList(_:)),
+//                              forControlEvents: .TouchUpInside)
+        
         
     
         //to do list table view
         self.toDoListTable = UITableView(frame: frame, style: .Plain)
-        self.toDoListTable.frame = CGRect(x: 0, y: originY, width: originX*2, height: originY)
+        self.toDoListTable.frame = CGRect(x: 0, y: originY - 100, width: originX*2, height: originY)
         view.addSubview(toDoListTable)
         
         self.toDoListTable.delegate = self
@@ -51,16 +58,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    func addToList(btn: UIButton!){
-        let task = self.textField.text
-        if (task?.characters.count == 0){
-            return //nothing entered, ignore
-        }
-        
-        self.toDoArray.append(task!)
-        self.textField.text = "" //clear text field
-        print("add task: \(self.toDoArray)")
-    }
     
     
     override func viewDidLoad() {
@@ -68,7 +65,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return 15
         
     }
     
@@ -88,6 +85,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("create new cell")
         return cell
     }
+    
+    func addToList(btn: UIButton!){
+//        var task = self.textField.text
+//        if (task?.characters.count == 0){
+//            return //nothing entered, ignore
+//        }
+//        
+//        self.toDoArray.append(task!)
+//        self.textField.text = "" //clear text field
+        print("add task: ")
+    }
+    
 
 
     override func didReceiveMemoryWarning() {
