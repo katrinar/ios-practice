@@ -13,6 +13,11 @@
 		54FCFA3B1CCEDC6B00FED7F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54FCFA3A1CCEDC6B00FED7F5 /* Assets.xcassets */; };
 		54FCFA3E1CCEDC6B00FED7F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FCFA3C1CCEDC6B00FED7F5 /* LaunchScreen.storyboard */; };
 		54FCFA471CCEE3F000FED7F5 /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCFA461CCEE3F000FED7F5 /* Candidate.swift */; };
+		54FCFA4D1CCEECDB00FED7F5 /* clinton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54FCFA491CCEECDB00FED7F5 /* clinton@2x.png */; };
+		54FCFA4E1CCEECDB00FED7F5 /* kasich@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54FCFA4A1CCEECDB00FED7F5 /* kasich@2x.png */; };
+		54FCFA4F1CCEECDB00FED7F5 /* sanders@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54FCFA4B1CCEECDB00FED7F5 /* sanders@2x.png */; };
+		54FCFA501CCEECDB00FED7F5 /* trump@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54FCFA4C1CCEECDB00FED7F5 /* trump@2x.png */; };
+		54FCFA521CCEF09800FED7F5 /* CandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCFA511CCEF09800FED7F5 /* CandidateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		54FCFA3D1CCEDC6B00FED7F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54FCFA3F1CCEDC6B00FED7F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54FCFA461CCEE3F000FED7F5 /* Candidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
+		54FCFA491CCEECDB00FED7F5 /* clinton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clinton@2x.png"; sourceTree = "<group>"; };
+		54FCFA4A1CCEECDB00FED7F5 /* kasich@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kasich@2x.png"; sourceTree = "<group>"; };
+		54FCFA4B1CCEECDB00FED7F5 /* sanders@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sanders@2x.png"; sourceTree = "<group>"; };
+		54FCFA4C1CCEECDB00FED7F5 /* trump@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trump@2x.png"; sourceTree = "<group>"; };
+		54FCFA511CCEF09800FED7F5 /* CandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +66,11 @@
 		54FCFA321CCEDC6B00FED7F5 /* tableView */ = {
 			isa = PBXGroup;
 			children = (
+				54FCFA481CCEECDB00FED7F5 /* images-candidates */,
 				54FCFA451CCEE3C000FED7F5 /* models */,
 				54FCFA331CCEDC6B00FED7F5 /* AppDelegate.swift */,
 				54FCFA351CCEDC6B00FED7F5 /* ViewController.swift */,
+				54FCFA511CCEF09800FED7F5 /* CandidateViewController.swift */,
 				54FCFA371CCEDC6B00FED7F5 /* Main.storyboard */,
 				54FCFA3A1CCEDC6B00FED7F5 /* Assets.xcassets */,
 				54FCFA3C1CCEDC6B00FED7F5 /* LaunchScreen.storyboard */,
@@ -73,6 +85,17 @@
 				54FCFA461CCEE3F000FED7F5 /* Candidate.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		54FCFA481CCEECDB00FED7F5 /* images-candidates */ = {
+			isa = PBXGroup;
+			children = (
+				54FCFA491CCEECDB00FED7F5 /* clinton@2x.png */,
+				54FCFA4A1CCEECDB00FED7F5 /* kasich@2x.png */,
+				54FCFA4B1CCEECDB00FED7F5 /* sanders@2x.png */,
+				54FCFA4C1CCEECDB00FED7F5 /* trump@2x.png */,
+			);
+			path = "images-candidates";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +157,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FCFA501CCEECDB00FED7F5 /* trump@2x.png in Resources */,
+				54FCFA4E1CCEECDB00FED7F5 /* kasich@2x.png in Resources */,
 				54FCFA3E1CCEDC6B00FED7F5 /* LaunchScreen.storyboard in Resources */,
 				54FCFA3B1CCEDC6B00FED7F5 /* Assets.xcassets in Resources */,
+				54FCFA4D1CCEECDB00FED7F5 /* clinton@2x.png in Resources */,
 				54FCFA391CCEDC6B00FED7F5 /* Main.storyboard in Resources */,
+				54FCFA4F1CCEECDB00FED7F5 /* sanders@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FCFA521CCEF09800FED7F5 /* CandidateViewController.swift in Sources */,
 				54FCFA471CCEE3F000FED7F5 /* Candidate.swift in Sources */,
 				54FCFA361CCEDC6B00FED7F5 /* ViewController.swift in Sources */,
 				54FCFA341CCEDC6B00FED7F5 /* AppDelegate.swift in Sources */,

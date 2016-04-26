@@ -10,10 +10,13 @@ import UIKit
 
 class Candidate: NSObject {
     
+    
     var name: String!
     var party: String!
     var state: String!
     var gender: String!
+    var image: String!
     var age: Int!
+    
     
 }
