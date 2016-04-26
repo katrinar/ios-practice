@@ -12,31 +12,55 @@ class CandidateViewController: UIViewController {
     
     var candidate: Candidate!
     var profImage: UIImageView!
-    var nameParty: UILabel!
+    var candidateName: UILabel!
+    var stateParty: UILabel!
     var profGender: UILabel!
+    var candidateBio: UILabel!
+    var scroll: UIScrollView!
     
     
     override func loadView() {
-        self.title = candidate.name
+        
+        self.title = candidate.name.capitalizedString
+        
+        edgesForExtendedLayout = .None
         let frame = UIScreen.mainScreen().bounds
         let view = UIView(frame: frame)
-        view.backgroundColor = UIColor.yellowColor()
+        view.backgroundColor = (candidate.party == "democrat") ? .blueColor() : .redColor()
         self.view = view
         
+        let scroll = UIScrollView(frame: frame)
+        var y = CGFloat(100)
+        scroll.contentSize = CGSize(width: 0, height: 1000)
+        view.addSubview(scroll)
+        
         let originX = frame.width * 0.5
-        self.profImage = UIImageView(frame: CGRect(x: originX * 0.5, y: 80, width: 200, height: 200))
-        profImage.image = UIImage(named: candidate.image)
-        view.addSubview(profImage)
+        self.profImage = UIImageView(frame: CGRect(x: originX - 100, y: 80, width: 200, height: 200))
+        self.profImage.image = UIImage(named: candidate.image)
+        scroll.addSubview(profImage)
         
-        self.nameParty = UILabel(frame: CGRect(x: originX * 0.5, y: 300, width: 250, height: 44))
-        nameParty.text = candidate.name.capitalizedString+", "+candidate.party.capitalizedString
-        view.addSubview(nameParty)
+        self.candidateName = UILabel(frame: CGRect(x: originX * 0.5, y: 300, width: 250, height: 44))
+        self.candidateName.text = candidate.name.capitalizedString
+        self.candidateName.textColor = UIColor.whiteColor()
+        scroll.addSubview(candidateName)
         
+        self.stateParty = UILabel(frame: CGRect(x: originX * 0.5, y: 350, width: 250, height: 44))
+        stateParty.text = candidate.state.capitalizedString+", "+candidate.party.capitalizedString
+        stateParty.textColor = UIColor.whiteColor()
+        view.addSubview(stateParty)
 
-        self.profGender = UILabel(frame: CGRect(x: originX * 0.5, y: 350, width: 200, height: 44))
+        self.profGender = UILabel(frame: CGRect(x: originX - 100, y: 400, width: 200, height: 44))
         let agestr = String(candidate.age)
-        profGender.text = candidate.gender.capitalizedString+", "+agestr
-        view.addSubview(profGender)
+        self.profGender.text = candidate.gender.capitalizedString+", "+agestr
+        self.profGender.textColor = UIColor.whiteColor()
+        scroll.addSubview(profGender)
+        
+        self.candidateBio = UILabel(frame: CGRect(x: originX - 150, y: 450, width: 300, height: 300))
+        self.candidateBio.text = candidate.bio
+        self.candidateBio.textColor = UIColor.whiteColor()
+        self.candidateBio.numberOfLines = 0
+        self.candidateBio.lineBreakMode = .ByWordWrapping
+        scroll.addSubview(candidateBio)
         
         
         

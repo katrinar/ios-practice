@@ -18,6 +18,7 @@
 		54FCFA4F1CCEECDB00FED7F5 /* sanders@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54FCFA4B1CCEECDB00FED7F5 /* sanders@2x.png */; };
 		54FCFA501CCEECDB00FED7F5 /* trump@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54FCFA4C1CCEECDB00FED7F5 /* trump@2x.png */; };
 		54FCFA521CCEF09800FED7F5 /* CandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCFA511CCEF09800FED7F5 /* CandidateViewController.swift */; };
+		54FCFA541CCF081000FED7F5 /* cruz@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54FCFA531CCF081000FED7F5 /* cruz@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		54FCFA4B1CCEECDB00FED7F5 /* sanders@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sanders@2x.png"; sourceTree = "<group>"; };
 		54FCFA4C1CCEECDB00FED7F5 /* trump@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trump@2x.png"; sourceTree = "<group>"; };
 		54FCFA511CCEF09800FED7F5 /* CandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateViewController.swift; sourceTree = "<group>"; };
+		54FCFA531CCF081000FED7F5 /* cruz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cruz@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				54FCFA491CCEECDB00FED7F5 /* clinton@2x.png */,
 				54FCFA4A1CCEECDB00FED7F5 /* kasich@2x.png */,
 				54FCFA4B1CCEECDB00FED7F5 /* sanders@2x.png */,
+				54FCFA531CCF081000FED7F5 /* cruz@2x.png */,
 				54FCFA4C1CCEECDB00FED7F5 /* trump@2x.png */,
 			);
 			path = "images-candidates";
@@ -161,6 +164,7 @@
 				54FCFA4E1CCEECDB00FED7F5 /* kasich@2x.png in Resources */,
 				54FCFA3E1CCEDC6B00FED7F5 /* LaunchScreen.storyboard in Resources */,
 				54FCFA3B1CCEDC6B00FED7F5 /* Assets.xcassets in Resources */,
+				54FCFA541CCF081000FED7F5 /* cruz@2x.png in Resources */,
 				54FCFA4D1CCEECDB00FED7F5 /* clinton@2x.png in Resources */,
 				54FCFA391CCEDC6B00FED7F5 /* Main.storyboard in Resources */,
 				54FCFA4F1CCEECDB00FED7F5 /* sanders@2x.png in Resources */,

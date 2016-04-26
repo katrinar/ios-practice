@@ -16,6 +16,7 @@ class Candidate: NSObject {
     var state: String!
     var gender: String!
     var image: String!
+    var bio: String!
     var age: Int!
     
     
