@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AAE699D10DA11B7D35774FE7065929AFAAAAF8DA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AAE699D10DA11B7D35774FE7065929AFAAAAF8DA" : 0,
+    "809B27CCD103079F7E28838EB5070AD4713FBB26" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2590D599-5C0C-4195-A6D4-1B14A0D69E80",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AAE699D10DA11B7D35774FE7065929AFAAAAF8DA" : "iOS-practice\/",
+    "809B27CCD103079F7E28838EB5070AD4713FBB26" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "tableView2",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "tableView2\/tableView2.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/katrinar\/codecademy-labs_final-projects.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "809B27CCD103079F7E28838EB5070AD4713FBB26"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/katrinar\/ios-practice.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AAE699D10DA11B7D35774FE7065929AFAAAAF8DA"
+    }
+  ]
+}

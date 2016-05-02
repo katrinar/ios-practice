@@ -19,7 +19,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.view = view
         self.view.backgroundColor = UIColor.whiteColor()
         
+        self.title = "Candidates 101"
+        
         self.firstTable = UITableView(frame: frame, style: .Plain)
+        self.firstTable.separatorStyle = UITableViewCellSeparatorStyle.SingleLineEtched
         view.addSubview(firstTable)
         
         self.firstTable.delegate = self
@@ -88,7 +91,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let candidate = self.candidates[indexPath.row]
 
         cell.textLabel?.text = candidate.name.capitalizedString+", "+candidate.party.capitalizedString
-        cell.detailTextLabel?.text = candidate.state
+        cell.detailTextLabel?.text = candidate.state.capitalizedString
         cell.textLabel?.textColor = (candidate.party == "democrat") ? .blueColor() : .redColor()
         cell.imageView?.image = UIImage(named: candidate.image) //lazy loading
         return cell

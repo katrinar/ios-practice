@@ -27,7 +27,9 @@ class HomeViewController: TestViewController {
         
         view.addSubview(homeBtn)
         
-        homeBtn.addTarget(self, action: #selector(HomeViewController.nextAction(_:)), forControlEvents: .TouchUpInside)
+        homeBtn.addTarget(self,
+                          action: #selector(HomeViewController.nextAction(_:)),
+                          forControlEvents: .TouchUpInside)
         
         self.view = view
     
@@ -37,7 +39,6 @@ class HomeViewController: TestViewController {
     func nextAction(btn: UIButton){
         print("Next Action")
 
-        
         let nextCtr = KRViewController()
         self.navigationController?.pushViewController(nextCtr, animated: true)
     }

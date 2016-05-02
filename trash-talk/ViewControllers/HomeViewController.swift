@@ -77,7 +77,6 @@ class HomeViewController: BaseViewController {
     
     //submit btn action
     func submitBtnTap(btn: UIButton){
-        self.exitBtnTap = true
         self.numTapped = self.numTapped+1
         print("submitted score count: \(self.numTapped)")
         self.scoreLabel.text = "Trash Talk Score: \(self.numTapped)"
@@ -100,11 +99,8 @@ class HomeViewController: BaseViewController {
     //exit btn action
     func exitBtnTap(btn: UIButton){
         print("exit btn tap: ")
-        self.exitBtnTap = false
         
-        if (self.exitBtnTap == false) {
             self.navigationController?.pushViewController(homeCtr, animated: true)
-        }
     }
     
     override func viewDidLoad() {

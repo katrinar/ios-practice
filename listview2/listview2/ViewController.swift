@@ -22,14 +22,15 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //nav bar
         let action = #selector(ViewController.showListView(_:))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next",
                                                                  style: .Plain,
                                                                  target: self,
                                                                  action: action)
         
-        
+        //slide view
         let firstSlide = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         firstSlide.backgroundColor = UIColor.redColor()
         self.imagesScroll.addSubview(firstSlide)
