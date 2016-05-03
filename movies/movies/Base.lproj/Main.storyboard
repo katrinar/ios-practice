@@ -28,10 +28,23 @@
                                     <action selector="watchBtnTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="wxm-oB-WOi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOl-Rd-m4U">
+                                <rect key="frame" x="277" y="346" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="VHM-2h-9DL"/>
+                                    <constraint firstAttribute="height" constant="44" id="iIC-Fo-jMj"/>
+                                </constraints>
+                                <state key="normal" title="See a Band"/>
+                                <connections>
+                                    <action selector="concertBtnTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="PAm-Ue-iac"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="C3G-bK-OiT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2cc-Sb-aOh"/>
+                            <constraint firstItem="xOl-Rd-m4U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FjS-c8-urO"/>
+                            <constraint firstItem="xOl-Rd-m4U" firstAttribute="top" secondItem="C3G-bK-OiT" secondAttribute="bottom" constant="31" id="mOs-8r-gTc"/>
                             <constraint firstItem="C3G-bK-OiT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="skE-ox-tGh"/>
                         </constraints>
                     </view>

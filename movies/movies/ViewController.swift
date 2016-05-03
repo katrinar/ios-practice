@@ -19,6 +19,14 @@ class ViewController: UIViewController {
     
     }
     
+    @IBAction func concertBtnTapped() {
+        
+        let bandListCtr = BandListViewController()
+        self.navigationController?.pushViewController(bandListCtr, animated: true)
+        
+        print("concertBtnTapped")
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		302FA02E9D4B68A3AB4CB026 /* Pods_movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B2CD91F5FD30AD9E2786FB /* Pods_movies.framework */; };
 		54885E351CD8351100E5C603 /* hangover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54885E341CD8351100E5C603 /* hangover@2x.png */; };
+		54885E371CD8368700E5C603 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54885E361CD8368700E5C603 /* Band.swift */; };
+		54885E391CD836DD00E5C603 /* BandListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54885E381CD836DD00E5C603 /* BandListViewController.swift */; };
+		54885E3B1CD83DE800E5C603 /* rollingstones@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54885E3A1CD83DE800E5C603 /* rollingstones@2x.png */; };
 		54A1FB1C1CD813D700AB5F72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1FB1B1CD813D700AB5F72 /* AppDelegate.swift */; };
 		54A1FB1E1CD813D700AB5F72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1FB1D1CD813D700AB5F72 /* ViewController.swift */; };
 		54A1FB211CD813D700AB5F72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54A1FB1F1CD813D700AB5F72 /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		54885E341CD8351100E5C603 /* hangover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hangover@2x.png"; sourceTree = "<group>"; };
+		54885E361CD8368700E5C603 /* Band.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Band.swift; path = "../../../../../../Katrina/Documents/iOS-practice/movies/movies/models/Band.swift"; sourceTree = "<group>"; };
+		54885E381CD836DD00E5C603 /* BandListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BandListViewController.swift; path = "../../../../../Katrina/Documents/iOS-practice/movies/movies/BandListViewController.swift"; sourceTree = "<group>"; };
+		54885E3A1CD83DE800E5C603 /* rollingstones@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rollingstones@2x.png"; sourceTree = "<group>"; };
 		54A1FB181CD813D700AB5F72 /* movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A1FB1B1CD813D700AB5F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54A1FB1D1CD813D700AB5F72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 				54A1FB1B1CD813D700AB5F72 /* AppDelegate.swift */,
 				54A1FB1D1CD813D700AB5F72 /* ViewController.swift */,
 				54A1FB2D1CD8150000AB5F72 /* MovieListViewController.swift */,
+				54885E381CD836DD00E5C603 /* BandListViewController.swift */,
 				54A1FB1F1CD813D700AB5F72 /* Main.storyboard */,
 				54A1FB221CD813D700AB5F72 /* Assets.xcassets */,
 				54A1FB241CD813D700AB5F72 /* LaunchScreen.storyboard */,
@@ -103,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				54A1FB301CD8194600AB5F72 /* Movie.swift */,
+				54885E361CD8368700E5C603 /* Band.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 				54A1FB351CD81C0100AB5F72 /* hungergames@2x.png */,
 				54A1FB361CD81C0100AB5F72 /* junglebook@2x.png */,
 				54A1FB371CD81C0100AB5F72 /* toystory@2x.png */,
+				54885E3A1CD83DE800E5C603 /* rollingstones@2x.png */,
 				54885E341CD8351100E5C603 /* hangover@2x.png */,
 			);
 			path = "images-movies";
@@ -198,6 +207,7 @@
 				54A1FB231CD813D700AB5F72 /* Assets.xcassets in Resources */,
 				54A1FB211CD813D700AB5F72 /* Main.storyboard in Resources */,
 				54A1FB3A1CD81C0100AB5F72 /* hungergames@2x.png in Resources */,
+				54885E3B1CD83DE800E5C603 /* rollingstones@2x.png in Resources */,
 				54885E351CD8351100E5C603 /* hangover@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				54A1FB2E1CD8150000AB5F72 /* MovieListViewController.swift in Sources */,
+				54885E391CD836DD00E5C603 /* BandListViewController.swift in Sources */,
 				54A1FB1E1CD813D700AB5F72 /* ViewController.swift in Sources */,
+				54885E371CD8368700E5C603 /* Band.swift in Sources */,
 				54A1FB311CD8194600AB5F72 /* Movie.swift in Sources */,
 				54A1FB1C1CD813D700AB5F72 /* AppDelegate.swift in Sources */,
 			);
