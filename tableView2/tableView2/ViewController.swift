@@ -38,9 +38,7 @@ class ViewController: UIViewController {
         text.layer.cornerRadius = 5
         text.text = ""
         view.addSubview(text)
-        
-        var task = text.text
-        
+                
         var taskArray = Array<String>()
 
 
@@ -53,8 +51,8 @@ class ViewController: UIViewController {
     
     
     func addTo(btn: UIButton){
-        var task = text.text
-        taskArray.append(task! )
+//        var task = text.text
+        taskArray.append(task)
         print("addTo: \(self.taskArray)")
     }
 
