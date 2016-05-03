@@ -76,15 +76,15 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
                     
                     for movieDict in movies {
                         let movie = Movie()
-                        //populating the object
+                        //populating the object, Movie()
                         movie.title = movieDict["title"] as? String
+                        movie.image = movieDict["image"] as? String
                         movie.year = movieDict["year"] as? String
                         movie.summary = movieDict["summary"] as? String
                         movie.leadActor = movieDict["leadActor"] as? String
-                        movie.image = movieDict["image"] as? String
-                        self.moviesArray.append(movie)
+                        self.moviesArray.append(movie) //assigning movie to Movie() array
 
-                        print("\(movie)")
+                        print("\(movie.image)")
                         
                     }
                     
