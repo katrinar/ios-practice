@@ -119,6 +119,13 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
         
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let movie = self.moviesArray[indexPath.row]
+        
+        let movieprofileVC = MovieProfileViewController()
+        self.navigationController?.pushViewController(movieprofileVC, animated: true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
