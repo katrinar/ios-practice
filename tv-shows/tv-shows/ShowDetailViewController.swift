@@ -26,7 +26,6 @@ class ShowDetailViewController: UIViewController, UITableViewDataSource, UITable
         self.title = self.tvShow.title
 
         let originX = frame.width * 0.5
-
         
         self.image = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         self.image.center = CGPoint(x: 0.5*frame.size.width, y: 90)
@@ -38,7 +37,6 @@ class ShowDetailViewController: UIViewController, UITableViewDataSource, UITable
         
         let str = NSString(string: self.tvShow.summary)
         let bounds = str.boundingRectWithSize(CGSizeMake(frame.size.width-40, 300), options: .UsesLineFragmentOrigin, attributes: [NSFontAttributeName:font!], context: nil)
-        
        
         self.summary = UILabel(frame: CGRect(x: originX-150, y: y, width: frame.size.width-40, height: bounds.size.height))
         self.summary.text = tvShow.summary
@@ -47,7 +45,7 @@ class ShowDetailViewController: UIViewController, UITableViewDataSource, UITable
         self.summary.font = font
         view.addSubview(summary)
         
-        y += summary.frame.size.height
+        y += summary.frame.size.height+20
         
         let tableFrame = CGRect(x: 0, y: y, width: frame.size.width, height: frame.size.height-y)
         
@@ -56,12 +54,10 @@ class ShowDetailViewController: UIViewController, UITableViewDataSource, UITable
         self.castTable.dataSource = self
         self.castTable.delegate = self
         view.addSubview(castTable)
-        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,21 +70,22 @@ class ShowDetailViewController: UIViewController, UITableViewDataSource, UITable
         
         let cellId = "cellId"
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellId){
-            cell.textLabel?.text = actor
+            cell.textLabel?.text = actor.capitalizedString
 
             return cell
         }
         
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellId)
-        cell.textLabel?.text = actor
+        cell.textLabel?.text = actor.capitalizedString
         return cell
     }
     
-
-
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Cast Members"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 
 }
