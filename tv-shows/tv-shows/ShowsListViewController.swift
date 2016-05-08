@@ -12,7 +12,8 @@ import Alamofire
 class ShowsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var showsTable: UITableView!
-    var showList = Array<Dictionary<String, AnyObject>>()
+//    var showList = Array<Dictionary<String, AnyObject>>()
+    var showList = Array<TVShow>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,16 @@ class ShowsListViewController: UIViewController, UITableViewDataSource, UITableV
                 if let shows = json["shows"] as? Array<Dictionary<String, AnyObject>> {
                     
                     for showInfo in shows {
-                        self.showList.append(showInfo)
+                        var show = TVShow()
+                        show.populate(showInfo)
+                        self.showList.append(show)
+                        
+//below now populated by populate function inside model file
+//                        show.title = showInfo["title"] as? String
+//                        show.network = showInfo["network"] as? String
+//                        show.summary = showInfo["summary"] as? String
+//                        show.cast = showInfo["cast"] as? Array<String>
+                
                     }
                     
                     self.showsTable.reloadData()
@@ -45,11 +55,21 @@ class ShowsListViewController: UIViewController, UITableViewDataSource, UITableV
         let tvShow = self.showList[indexPath.row]
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cellId", forIndexPath: indexPath)
-        cell.textLabel?.text = tvShow["title"] as? String
-        cell.detailTextLabel?.text = tvShow["network"] as? String
+//        cell.textLabel?.text = tvShow["title"] as? String
+//        cell.detailTextLabel?.text = tvShow["network"] as? String
+        cell.textLabel?.text = tvShow.title
+        cell.detailTextLabel?.text = tvShow.network
         return cell
     }
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        let tvShow = self.showList[indexPath.row]
+        
+        let showViewCtr = ShowDetailViewController()
+        showViewCtr.tvShow = tvShow
+        self.navigationController?.pushViewController(showViewCtr, animated: true)
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
