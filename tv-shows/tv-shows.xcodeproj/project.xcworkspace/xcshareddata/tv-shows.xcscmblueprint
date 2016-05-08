@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AAE699D10DA11B7D35774FE7065929AFAAAAF8DA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AAE699D10DA11B7D35774FE7065929AFAAAAF8DA" : 0,
+    "809B27CCD103079F7E28838EB5070AD4713FBB26" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "310E4884-EBBB-4D9D-83BD-E2A0B2902258",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AAE699D10DA11B7D35774FE7065929AFAAAAF8DA" : "iOS-practice\/",
+    "809B27CCD103079F7E28838EB5070AD4713FBB26" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "tv-shows",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "tv-shows\/tv-shows.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/katrinar\/codecademy-labs_final-projects.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "809B27CCD103079F7E28838EB5070AD4713FBB26"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/katrinar\/ios-practice.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AAE699D10DA11B7D35774FE7065929AFAAAAF8DA"
+    }
+  ]
+}
