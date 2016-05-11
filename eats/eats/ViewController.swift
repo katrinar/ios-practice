@@ -22,7 +22,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
         edgesForExtendedLayout = .None
         view.backgroundColor = UIColor.whiteColor()
         self.view = view
-        
 
         self.foodTable = UITableView(frame: frame, style: .Plain)
         self.foodTable.delegate = self
@@ -101,6 +100,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
         return cell
         
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        let venueViewCtr = VenueViewController()
+        self.navigationController?.pushViewController(venueViewCtr, animated: true)
+        
+    }
+
 
     
     override func didReceiveMemoryWarning() {

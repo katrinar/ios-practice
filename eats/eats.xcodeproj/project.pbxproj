@@ -14,6 +14,7 @@
 		548EB6DC1CDFC3710012AC68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 548EB6DB1CDFC3710012AC68 /* Assets.xcassets */; };
 		548EB6DF1CDFC3710012AC68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548EB6DD1CDFC3710012AC68 /* LaunchScreen.storyboard */; };
 		548EB6E81CDFD3E20012AC68 /* FoodPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EB6E71CDFD3E20012AC68 /* FoodPlace.swift */; };
+		54D5351F1CE2D7B9003C9E2E /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5351E1CE2D7B9003C9E2E /* VenueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		548EB6DE1CDFC3710012AC68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		548EB6E01CDFC3710012AC68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		548EB6E71CDFD3E20012AC68 /* FoodPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodPlace.swift; path = "../../../../../../Katrina/Documents/iOS-practice/eats/eats/models/FoodPlace.swift"; sourceTree = "<group>"; };
+		54D5351E1CE2D7B9003C9E2E /* VenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VenueViewController.swift; path = "../../../../../Katrina/Documents/iOS-practice/eats/eats/VenueViewController.swift"; sourceTree = "<group>"; };
 		C127DC2B6F5B15475DD5AB58 /* Pods-eats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eats.release.xcconfig"; path = "Pods/Target Support Files/Pods-eats/Pods-eats.release.xcconfig"; sourceTree = "<group>"; };
 		F053995D13DD13366B5CFA08 /* Pods_eats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 				548EB6E61CDFD3B80012AC68 /* models */,
 				548EB6D41CDFC3710012AC68 /* AppDelegate.swift */,
 				548EB6D61CDFC3710012AC68 /* ViewController.swift */,
+				54D5351E1CE2D7B9003C9E2E /* VenueViewController.swift */,
 				548EB6D81CDFC3710012AC68 /* Main.storyboard */,
 				548EB6DB1CDFC3710012AC68 /* Assets.xcassets */,
 				548EB6DD1CDFC3710012AC68 /* LaunchScreen.storyboard */,
@@ -224,6 +227,7 @@
 			files = (
 				548EB6D71CDFC3710012AC68 /* ViewController.swift in Sources */,
 				548EB6D51CDFC3710012AC68 /* AppDelegate.swift in Sources */,
+				54D5351F1CE2D7B9003C9E2E /* VenueViewController.swift in Sources */,
 				548EB6E81CDFD3E20012AC68 /* FoodPlace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
