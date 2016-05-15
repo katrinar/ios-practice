@@ -30,6 +30,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+
+        notificationCenter.addObserver(self,
+                                       selector: #selector(ViewController.refreshView),
+                                       name: Constants.kImageDownloadedNotification,
+                                       object: nil)
+        
         let url = "http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=98b525225a2fe71d855108eca4fdf12d"
         
         Alamofire.request(.GET, url, parameters: nil).responseJSON {
@@ -51,6 +58,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    func refreshView(){
+        self.moviesTable.reloadData()
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return moviesArray.count
     }
@@ -60,14 +71,41 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cellId = "cellId"
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellId){
             cell.textLabel?.text = movie.title
-            cell.detailTextLabel?.text = "\(movie.popularity)"
+            let rating = String(format: "%.01f", movie.popularity!)
+            cell.detailTextLabel?.text = "\(rating)"
+            if (movie.posterImage != nil){
+                cell.imageView?.image = movie.posterImage
+                return cell
+            }
+            
+            movie.fetchPosterImage()
             return cell
         }
         
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellId)
         cell.textLabel?.text = movie.title
-        cell.detailTextLabel?.text = "\(movie.popularity)"
+        let rating = String(format: "%.01f", movie.popularity!)
+        cell.detailTextLabel?.text = "\(rating)"
+        if (movie.posterImage != nil){
+            cell.imageView?.image = movie.posterImage
+            return cell
+        }
+        
+        movie.fetchPosterImage()
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 88
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        
+        let movie = self.moviesArray[indexPath.row]
+        let movieViewCtr = MovieViewController()
+        movieViewCtr.selectedMovie = movie
+        self.navigationController?.pushViewController(movieViewCtr, animated: true)
+
     }
 
     override func didReceiveMemoryWarning() {
