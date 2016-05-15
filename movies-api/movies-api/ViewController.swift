@@ -13,7 +13,7 @@ import Alamofire
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var moviesTable: UITableView!
-    var moviesArray = Array<Dictionary<String, AnyObject>>()
+    var moviesArray = Array<Movie>()
     
     override func loadView() {
         let frame = UIScreen.mainScreen().bounds
@@ -37,25 +37,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             if let json = response.result.value as? Dictionary<String, AnyObject> {
                 print(json)
+                
+                if let results = json["results"] as? Array<Dictionary<String, AnyObject>>{
+                    
+                    for movieInfo in results {
+                        let movie = Movie()
+                        movie.populate(movieInfo)
+                        self.moviesArray.append(movie)
+                    }
+                    self.moviesTable.reloadData()
+                }
             }
         }
-  
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return moviesArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
+        let movie = self.moviesArray[indexPath.row]
         let cellId = "cellId"
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellId){
-            cell.textLabel?.text = ("\(indexPath.row)")
+            cell.textLabel?.text = movie.title
+            cell.detailTextLabel?.text = "\(movie.popularity)"
             return cell
         }
         
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellId)
-        cell.textLabel?.text = ("\(indexPath.row)")
+        cell.textLabel?.text = movie.title
+        cell.detailTextLabel?.text = "\(movie.popularity)"
         return cell
     }
 
