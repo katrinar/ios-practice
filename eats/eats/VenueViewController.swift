@@ -14,7 +14,7 @@ class VenueViewController: UIViewController {
     var selectedVenue: FoodPlace!
     var venueVicinity: UILabel!
     var venueIcon: UIImageView!
-//    var ratingText: ""
+
     
     override func loadView() {
         let frame = UIScreen.mainScreen().bounds
@@ -28,6 +28,7 @@ class VenueViewController: UIViewController {
         self.venueRating = UILabel(frame: CGRect(x: 20, y: 20, width: 400, height: 44))
         self.venueRating.textColor = UIColor.blackColor()
         self.venueRating.backgroundColor = UIColor.yellowColor()
+        self.venueRating.text = "\(selectedVenue.rating)"
 
         view.addSubview(venueRating)
         
