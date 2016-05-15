@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var moviesTable: UITableView!
+    var moviesArray = Array<Dictionary<String, AnyObject>>()
     
     override func loadView() {
         let frame = UIScreen.mainScreen().bounds
@@ -26,6 +29,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let url = "http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=98b525225a2fe71d855108eca4fdf12d"
+        
+        Alamofire.request(.GET, url, parameters: nil).responseJSON {
+            response in
+            
+            if let json = response.result.value as? Dictionary<String, AnyObject> {
+                print(json)
+            }
+        }
   
     }
     
@@ -44,14 +57,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellId)
         cell.textLabel?.text = ("\(indexPath.row)")
         return cell
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
