@@ -9,8 +9,6 @@
 import UIKit
 
 class Candidate: NSObject {
-    
-    
     var name: String!
     var party: String!
     var state: String!
@@ -18,6 +16,4 @@ class Candidate: NSObject {
     var image: String!
     var bio: String!
     var age: Int!
-    
-    
 }

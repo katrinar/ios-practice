@@ -14,6 +14,7 @@ class MovieViewController: UIViewController, UIScrollViewDelegate {
     var selectedMoviePoster: UIImageView!
     var movieIcon: UIImageView!
     var scrollView: UIScrollView!
+    var movieOverview: UILabel!
     
     override func loadView() {
         self.title = selectedMovie.title
@@ -30,10 +31,8 @@ class MovieViewController: UIViewController, UIScrollViewDelegate {
         let scale = width/posterFrame.size.width
         let height = scale * posterFrame.size.height
         self.selectedMoviePoster.frame = CGRect(x: 0, y: 0, width: width, height: height)
-        
-        view.addSubview(selectedMoviePoster)
 
-        view.addSubview(self.selectedMoviePoster)
+        view.addSubview(selectedMoviePoster)
         
         let screen = UIView(frame: frame)
         screen.backgroundColor = UIColor.blackColor()
@@ -43,14 +42,23 @@ class MovieViewController: UIViewController, UIScrollViewDelegate {
         let scrollView = UIScrollView(frame: frame)
         scrollView.delegate = self
         scrollView.contentSize = CGSize(width: 0, height: 1000)
+        view.addSubview(scrollView)
         
         self.movieIcon = UIImageView(image: self.selectedMovie.posterImage)
         self.movieIcon.frame = CGRect(x: 0, y: 0, width: 0.5*width, height: 0.5*height)
-        self.movieIcon.center = CGPoint(x: 0.5*frame.size.width, y: 240)
+        self.movieIcon.center = CGPoint(x: 0.5*frame.size.width, y: 140)
         self.movieIcon.layer.borderColor = UIColor.whiteColor().CGColor
         self.movieIcon.layer.borderWidth = 3
         view.addSubview(movieIcon)
-        view.addSubview(scrollView)
+        
+        let overviewY = movieIcon.frame.height
+        self.movieOverview = UILabel(frame: CGRect(x: 0, y: overviewY*2, width: width-10, height: 500))
+        self.movieOverview.text = selectedMovie.overview
+        self.movieOverview.textAlignment = .Center
+        self.movieOverview.numberOfLines = 0
+        self.movieOverview.lineBreakMode = .ByWordWrapping
+        self.movieOverview.textColor = UIColor.whiteColor()
+        scrollView.addSubview(movieOverview)
         
         self.view = view
     }
@@ -66,14 +74,35 @@ class MovieViewController: UIViewController, UIScrollViewDelegate {
         if (offset > 0){
             self.selectedMoviePoster.transform = CGAffineTransformIdentity
             var frame = self.selectedMoviePoster.frame
+            var movieFrame = self.movieIcon.frame
+            
             frame.origin.y = -0.2*offset
             self.selectedMoviePoster.frame = frame
+            self.movieIcon.frame = movieFrame
+            
+            var frameIcon = self.movieIcon.frame
+            frameIcon.origin.y = 0.2*offset
+            let tx = (offset/500)-1
+            self.movieIcon.transform = CGAffineTransformMakeScale(-tx, -tx)
+            
+            if (offset > 400){
+                print("OFFSET: target")
+                scrollView.addSubview(movieIcon)
+            }
+        
             return
         }
+        
+       
         
         offset = -1*offset
         let tx = (offset/500)+1
         self.selectedMoviePoster.transform = CGAffineTransformMakeScale(tx, tx)
+        view.addSubview(movieIcon)
+        
+        
+
+        //homework: make icon increase by 20% when scroll down
     }
 
     override func didReceiveMemoryWarning() {

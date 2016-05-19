@@ -14,6 +14,7 @@ class Movie: NSObject {
     
     var title: String?
     var poster: String?
+    var overview: String?
     var popularity: Double?
     var posterImage: UIImage?
     var isFetchingImage = false
@@ -56,6 +57,10 @@ class Movie: NSObject {
         
         if let _poster = info["poster_path"] as? String {
             self.poster = _poster
+        }
+        
+        if let _overview = info["overview"] as? String {
+            self.overview = _overview
         }
         
         if let _popularity = info["popularity"] as? Double {
