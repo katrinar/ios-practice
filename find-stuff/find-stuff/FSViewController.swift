@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 import Alamofire
 
-class FSViewController: UIViewController, CLLocationManagerDelegate {
+class FSViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     var mapView: MKMapView!
     var locationManager: CLLocationManager!
@@ -19,7 +19,7 @@ class FSViewController: UIViewController, CLLocationManagerDelegate {
     var searchField: UITextField!
     var venues = Array<FSVenue>()
     
-    
+    //MARK: - Lifecycle
     override func loadView() {
         self.edgesForExtendedLayout = .None
         let frame = UIScreen.mainScreen().bounds
@@ -28,12 +28,13 @@ class FSViewController: UIViewController, CLLocationManagerDelegate {
         self.view = view
         
         self.mapView = MKMapView(frame: frame)
+        self.mapView.delegate = self
+        view.addSubview(mapView)
+        
 //        self.mapView.centerCoordinate = CLLocationCoordinate2DMake(40.7414562, -73.9888253)
 //        let regionRadius = CLLocationDistance(500)
 //        let coordinateRegion = MKCoordinateRegionMakeWithDistance(self.mapView.centerCoordinate, regionRadius, regionRadius)
 //        self.mapView.setRegion(coordinateRegion, animated: true)
-        view.addSubview(mapView)
-        
         
         let height = CGFloat(44)
         let width = frame.size.width
@@ -72,6 +73,20 @@ class FSViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager = CLLocationManager()
         self.locationManager.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
+        
+        let action = #selector(FSViewController.toggle)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "toggle",
+                                                                 style: .Plain,
+                                                                 target: self,
+                                                                 action: action)
+    }
+    
+    //MARK: - Custom
+    func toggle(){
+        print("toggle")
+        
+        let tableVc = FSTableViewController()
+        self.navigationController?.pushViewController(tableVc, animated: true)
     }
     
     func searchVenues(btn: UIButton){
@@ -105,17 +120,39 @@ class FSViewController: UIViewController, CLLocationManagerDelegate {
                     if let venuesArray = resp["venues"] as? Array<Dictionary<String, AnyObject>>{
 //                        print ("\(venuesArray)")
                         
+                        self.mapView.removeAnnotations(self.venues)
+                        self.venues.removeAll()
+                        
                         for venueInfo in venuesArray {
                             let venue = FSVenue()
                             venue.populate(venueInfo)
                             self.venues.append(venue)
                         }
+                        self.mapView.addAnnotations(self.venues)
                     }
                 }
             }
         }
     }
     
+    //MARK: - MapViewDelegate
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        let annotation = annotation as! FSVenue
+        let identifier = "pin"
+        
+        if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) as? MKPinAnnotationView {
+           return dequeuedView
+        }
+        
+        let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+        pinView.annotation = annotation
+        pinView.canShowCallout = true
+        pinView.animatesDrop = true
+        return pinView
+    }
+    
+    //MARK: - LocationManagerDelegate
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if (status == .AuthorizedWhenInUse){
             self.locationManager.startUpdatingLocation()

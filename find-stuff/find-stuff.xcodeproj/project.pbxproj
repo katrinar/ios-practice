@@ -11,6 +11,7 @@
 		5435FB6C1CF1F51A0010CC0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5435FB6B1CF1F51A0010CC0B /* Assets.xcassets */; };
 		5453C33D1CF1F61C002A2375 /* FSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5453C33C1CF1F61C002A2375 /* FSViewController.swift */; };
 		5453C3401CF2198B002A2375 /* FSVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5453C33F1CF2198B002A2375 /* FSVenue.swift */; };
+		5453C3421CF23218002A2375 /* FSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5453C3411CF23218002A2375 /* FSTableViewController.swift */; };
 		AB39F4F49F04E30C651B53DF /* Pods_find_stuff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0465C97707AD05AC5B8DA069 /* Pods_find_stuff.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		5435FB701CF1F51A0010CC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5453C33C1CF1F61C002A2375 /* FSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FSViewController.swift; path = "../../../../../Katrina/Documents/iOS-practice/find-stuff/find-stuff/FSViewController.swift"; sourceTree = "<group>"; };
 		5453C33F1CF2198B002A2375 /* FSVenue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FSVenue.swift; path = "../../../../../../Katrina/Documents/iOS-practice/find-stuff/find-stuff/models/FSVenue.swift"; sourceTree = "<group>"; };
+		5453C3411CF23218002A2375 /* FSTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FSTableViewController.swift; path = "../../../../../Katrina/Documents/iOS-practice/find-stuff/find-stuff/FSTableViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				5453C33E1CF21963002A2375 /* models */,
 				5435FB641CF1F51A0010CC0B /* AppDelegate.swift */,
 				5453C33C1CF1F61C002A2375 /* FSViewController.swift */,
+				5453C3411CF23218002A2375 /* FSTableViewController.swift */,
 				5435FB6B1CF1F51A0010CC0B /* Assets.xcassets */,
 				5435FB701CF1F51A0010CC0B /* Info.plist */,
 			);
@@ -216,6 +219,7 @@
 			files = (
 				5435FB651CF1F51A0010CC0B /* AppDelegate.swift in Sources */,
 				5453C33D1CF1F61C002A2375 /* FSViewController.swift in Sources */,
+				5453C3421CF23218002A2375 /* FSTableViewController.swift in Sources */,
 				5453C3401CF2198B002A2375 /* FSVenue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
