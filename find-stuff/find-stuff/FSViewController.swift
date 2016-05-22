@@ -84,8 +84,9 @@ class FSViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDe
     //MARK: - Custom
     func toggle(){
         print("toggle")
-        
+        let venues = self.venues
         let tableVc = FSTableViewController()
+        tableVc.venues = venues
         self.navigationController?.pushViewController(tableVc, animated: true)
     }
     
@@ -113,12 +114,9 @@ class FSViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         
         Alamofire.request(.GET, url, parameters: params).responseJSON { response in
             if let json = response.result.value as? Dictionary<String, AnyObject>{
-//                print("\(json)")
                 
                 if let resp = json["response"] as? Dictionary<String, AnyObject>{
-//                    print("\(resp)")
                     if let venuesArray = resp["venues"] as? Array<Dictionary<String, AnyObject>>{
-//                        print ("\(venuesArray)")
                         
                         self.mapView.removeAnnotations(self.venues)
                         self.venues.removeAll()
@@ -179,7 +177,6 @@ class FSViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         })
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

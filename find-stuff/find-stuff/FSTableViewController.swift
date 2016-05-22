@@ -15,6 +15,7 @@ class FSTableViewController: UIViewController, UITableViewDelegate, UITableViewD
     var venues = Array<FSVenue>()
     
     override func loadView() {
+        edgesForExtendedLayout = .None
         let frame = UIScreen.mainScreen().bounds
         let view = UIView(frame: frame)
         view.backgroundColor = UIColor.whiteColor()
@@ -23,7 +24,7 @@ class FSTableViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView = UITableView(frame: frame, style: .Plain)
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.view.addSubview(tableView)
+        view.addSubview(tableView)
     }
 
     override func viewDidLoad() {
@@ -40,16 +41,17 @@ class FSTableViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let venue = self.venues[indexPath.row]
         let cellId = "cellId"
+        
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellId){
             cell.textLabel?.text = venue.name
+            cell.detailTextLabel?.text = venue.address
             return cell
-            print("reuse cell")
         }
-        
+
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellId)
             cell.textLabel?.text = venue.name
+            cell.detailTextLabel?.text = venue.address
             return cell
-        print("new cell")
     }
 
     override func didReceiveMemoryWarning() {
