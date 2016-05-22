@@ -17,6 +17,7 @@ class FSViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager: CLLocationManager!
     var bottomView: UIView!
     var searchField: UITextField!
+    var venues = Array<FSVenue>()
     
     
     override func loadView() {
@@ -80,15 +81,37 @@ class FSViewController: UIViewController, CLLocationManagerDelegate {
         }
         
         let currentLocation = self.mapView.centerCoordinate
-        print("Current Location: \(currentLocation)")
+//        print("Current Location: \(currentLocation)")
         
         let latLng = "\(currentLocation.latitude),\(currentLocation.longitude)"
         
-        let url = "https://api.foursquare.com/v2/venues/search?v=20140806&ll=\(latLng)&query=\(searchText)&client_id=VZZ1EUDOT0JYITGFDKVVMCLYHB3NURAYK3OHB5SK5N453NFD&client_secret=UAA15MIFIWVKZQRH22KPSYVWREIF2EMMH0GQ0ZKIQZC322NZ"
+//        let url = "https://api.foursquare.com/v2/venues/search?v=20140806&ll=\(latLng)&query=\(searchText)&client_id=VZZ1EUDOT0JYITGFDKVVMCLYHB3NURAYK3OHB5SK5N453NFD&client_secret=UAA15MIFIWVKZQRH22KPSYVWREIF2EMMH0GQ0ZKIQZC322NZ"
         
-        Alamofire.request(.GET, url, parameters: nil).responseJSON { response in
+        let url = "https://api.foursquare.com/v2/venues/search"
+        let params = [
+            "v": "20140806",
+            "ll": latLng,
+            "query": searchText,
+            "client_id": "VZZ1EUDOT0JYITGFDKVVMCLYHB3NURAYK3OHB5SK5N453NFD",
+            "client_secret": "UAA15MIFIWVKZQRH22KPSYVWREIF2EMMH0GQ0ZKIQZC322NZ"
+        ]
+        
+        Alamofire.request(.GET, url, parameters: params).responseJSON { response in
             if let json = response.result.value as? Dictionary<String, AnyObject>{
-                print("\(json)")
+//                print("\(json)")
+                
+                if let resp = json["response"] as? Dictionary<String, AnyObject>{
+//                    print("\(resp)")
+                    if let venuesArray = resp["venues"] as? Array<Dictionary<String, AnyObject>>{
+//                        print ("\(venuesArray)")
+                        
+                        for venueInfo in venuesArray {
+                            let venue = FSVenue()
+                            venue.populate(venueInfo)
+                            self.venues.append(venue)
+                        }
+                    }
+                }
             }
         }
     }
@@ -102,7 +125,7 @@ class FSViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = locations[0]
-        print("didUpdateLocations: \(location)")
+//        print("didUpdateLocations: \(location)")
         self.locationManager.stopUpdatingLocation()
         
         let coordinate = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
