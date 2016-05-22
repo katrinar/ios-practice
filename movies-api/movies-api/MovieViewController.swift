@@ -93,14 +93,11 @@ class MovieViewController: UIViewController, UIScrollViewDelegate {
             return
         }
         
-       
         
         offset = -1*offset
         let tx = (offset/500)+1
         self.selectedMoviePoster.transform = CGAffineTransformMakeScale(tx, tx)
         view.addSubview(movieIcon)
-        
-        
 
         //homework: make icon increase by 20% when scroll down
     }

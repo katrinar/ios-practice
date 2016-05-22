@@ -12,6 +12,7 @@ class Venue: NSObject {
     
     var name: String!
     var address: String!
+    var hereNowSummary: String!
     
     func populate(info: Dictionary<String, AnyObject>){
         
@@ -23,6 +24,13 @@ class Venue: NSObject {
             if let _address = _location["address"] as? String {
                 self.address = _address
             }
+        }
+        
+        if let _hereNow = info[""] as? Dictionary<String, AnyObject> {
+            if let _hereNowSummary = _hereNow["summary"] as? String {
+                self.hereNowSummary = _hereNowSummary
+            }
+            
         }
     }
 }

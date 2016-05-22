@@ -99,9 +99,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        let venues = self.venues[indexPath.row]
+        let venueViewCtr = VenueViewController()
+        self.navigationController?.pushViewController(venueViewCtr, animated: true)
         
     }
-
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
