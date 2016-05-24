@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 import Alamofire
 
-class FSViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class FSViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate,UITextFieldDelegate {
     
     var mapView: MKMapView!
     var locationManager: CLLocationManager!
@@ -51,6 +51,7 @@ class FSViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         self.searchField = UITextField(frame: CGRect(x: padding, y: padding, width: width-2*padding-btnWidth, height: height-2*padding))
         self.searchField.borderStyle = .RoundedRect
         self.searchField.placeholder = "what are you looking for?"
+        self.searchField.delegate = self
         self.bottomView.addSubview(self.searchField)
         
         let btnSearch = UIButton(type: .Custom)
@@ -133,6 +134,13 @@ class FSViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         }
     }
     
+    //MARK: - TextField Delegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        print("textFieldShouldReturn: ")
+        searchField.resignFirstResponder()
+        return true
+    }
+    
     //MARK: - MapViewDelegate
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -173,6 +181,7 @@ class FSViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         UIView.animateWithDuration(0.4, animations: {
             var bottomFrame = self.bottomView.frame
             bottomFrame.origin.y = bottomFrame.origin.y-self.bottomView.frame.size.height
+
             self.bottomView.frame = bottomFrame
         })
     }
